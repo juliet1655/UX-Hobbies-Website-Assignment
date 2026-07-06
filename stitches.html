@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <head>
     <title>Learn how to crochet!</title>
+    <style>
+        h1 {
+            text-align: center;
+            size: 24px;
+        }
+        button {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h1>Learn how to do basic crochet!</h1>
-    <h2>Crochet with slip knot:</h2>
-    <h3>Make a slip knot</h3>
-    <a href="slipknot.html" class="text-decoration-none text-dark">
-        <div class="slip-knot">
-            <h3>Slip knot </h3>
-            <img src="slipknot.jpg">
-        </div>
-    </a>
-    <a href="chain.html" class="text-decoration-none text-dark">
-        <div class="chain">
-            <h3>Chain (ch)</h3>
-            <img src="chain.jpg">
-        </div>
-    </a>
+    <div style="display: flex; gap: 10px;">
+        <button type="button" onclick="window.location.href='square.html'">
+            <h2>Crochet a sample square</h2>
+            <img src="square.jpg">
+            <p>This is a simple guide to help you get started with basic crochet stitches</p>
+            <p>Difficulty: ⭐</p>
+        </button>
+        <br>
+        <button type="button" onclick="window.location.href='coaster.html'">
+            <h2>Crochet a coaster</h2>
+            <img src="coaster.jpg">
+            <p>Create a simple crochet coaster to learn new patterns and changing of yarn</p>
+            <p>Difficulty: ⭐⭐</p>
+        </button>
+        <button type="button" onclick="window.location.href='stitches.html'">
+            <h2>Learn different crochet stitches</h2>
+            <img src="stitches.jpg">
+            <p>Learn different crochet stitches to create more complex patterns</p>
+            <p>Difficulty: ⭐⭐⭐</p>
+        </button>
+    </div>
 </body>
