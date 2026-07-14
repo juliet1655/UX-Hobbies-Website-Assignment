@@ -6,6 +6,27 @@ h2{
     font-family: 'Courier New';
 }
 
+.navbar{
+    font-size: 25px;
+    background-color: #fad5e5;
+}
+
+.nav-item{
+    border-radius: 20px;
+    font-weight:500;
+    align-items: center;
+    margin-right: 40px;
+    font-weight: bold;
+    background-color: pink;
+
+}
+
+.nav-item:hover{
+    background-color: #F3CFC6;
+    color: white;
+    
+}
+
 .custom-btn{
     display: inline-block;
     background-color: #c2dcc1; 
@@ -25,7 +46,7 @@ h2{
 }
 
 .logo-image{
-    border-radius: 4px;
+    border-radius: 60px;
     width: 100px;
 }
 
@@ -81,4 +102,5 @@ section{
 }
 footer{
     margin-top:50px;
+    background-color: #fad5e5 ;
 }
