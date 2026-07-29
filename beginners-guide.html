@@ -7,17 +7,21 @@
 </head>
 <style>
         body{
-            font-family: "Times New Roman";
             margin:0;
-            background-color:#fff8f6;
+            padding:0;
+            font-family:"Times New Roman";
         }
+        
         .nav-item:hover{
         background-color: #F3CFC6;
         color: white;
         }
         h1 {
             text-align: center;
-            size: 24px;
+            font-weight: bold;
+            margin-top: 3px;
+            margin-bottom: 75px;
+            color: #556B4F;
         }
         .project-card {
             display:flex;
@@ -64,10 +68,13 @@
             margin-top:50px;
             background-color: #fad5e5 ;
         }
+        button:hover{
+            background:#fff3ef;
+        }
 </style>
-
 <body>
-    <nav class="navbar navbar-expand-lg">
+
+<nav class="navbar navbar-expand-lg">
     <div class="container">
         <div class="logo-section">
             <a href="homepage.html">
@@ -98,22 +105,41 @@
 </nav>
 
     <br>
-    <h1>Learn how to crochet!</h1>
-    <div class="container mt-3 mb-4 d-flex justify-content-end">
-
-    </div>
+    <h1 class="page-title">Basic Crochet Stitching🧶</h1>
     <div style="display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap;">
         <button type="button" class="project-card" onclick="window.location.href='square.html'">
             <h2>Sample Square</h2>
+            <p>(Single Crochet)</p>
             <img src="square.jpg">
             <br>
             <p>Get used to crocheting with this simple project</p>
         </button>
-        <button type="button" class="project-card" onclick="window.location.href='square.html'">
+        <button type="button" class="project-card" onclick="window.location.href='double.html'">
+            <h2>Sample Square</h2>
+            <p>(Double Crochet)</p>
+            <img src="double-crochet.jpg">
+            <br>
+            <p>Try this popular stitch in a simple project</p>
+        </button>
+        <button type="button" class="project-card" onclick="window.location.href='half-double.html'">
+            <h2>Sample Square</h2>
+            <p>(Half Double Crochet)</p>
+            <img src="half-double-crochet.jpg">
+            <br>
+            <p>Learn a new stitch with this easy project</p>
+        </button>
+        <button type="button" class="project-card" onclick="window.location.href='triple.html'">
+            <h2>Sample Square</h2>
+            <p>(Triple Crochet)</p>
+            <img src="triple-crochet.jpg">
+            <br>
+            <p>Practice this more advanced stitch in a simple project</p>
+        </button>
+        <button type="button" class="project-card" onclick="window.location.href='granny.html'">
             <h2>Granny Square</h2>
             <img src="granny-square.jpg">
             <br>
-            <p>Practice the classic granny square stitch</p>
+            <p>Try the classic granny square stitch using different stitches</p>
         </button>
         <button type="button" class="project-card" onclick="window.location.href='tools.html'">
             <h2>Materials Needed for Projects</h2>
@@ -122,6 +148,11 @@
             <p>Unsure what to purchase for projects? Click here to find the essentials!</p>
         </button>
     </div>
+
+<footer class="text-center p-4">
+<p>© 2026 Crochet Corner</p>
+</footer>
+
     <script>
 
         const filter = document.getElementById("difficulty");
@@ -150,9 +181,6 @@
         });
 
     </script>
-    <footer class="text-center p-4">
-        <p>© 2026 Crochet Corner</p>
-    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>//
+</html>
