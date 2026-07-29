@@ -1,0 +1,67 @@
+/* Center and pad the Hero section */
+.request-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.request-hero-content {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.request-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 16px;
+}
+
+.request-hero p {
+    font-size: 1.1rem;
+    color: #666666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+.request-section{
+    background:#F8F8F8;
+    padding:80px 0;
+}
+
+.request-card{
+    background:white;
+    border-radius:25px;
+    display:flex;
+    justify-content:space-between;
+    gap:60px;
+    padding:60px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.request-left{
+    flex:2;
+}
+
+.request-right{
+    flex:1;
+    text-align:center;
+}
+
+.request-left button{
+    background:#FAD5E5;
+    border:none;
+    padding:15px 25px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.request-left button:hover{
+    background:#BFD3AA;
+    color:black;
+}

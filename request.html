@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Crochet Crafts</title>
+    <title>Request a pattern</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="stylehomepage.css">
     <link rel="stylesheet" href="styleaboutpage.css">
+    <link rel="stylesheet" href="stylerequestpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body>
 
 <nav class="navbar navbar-expand-lg">
@@ -38,9 +41,75 @@
     </div>
 </nav>
 
+<section class="request-hero">
+    <div class="container">
+        <div class="request-hero-content">
+            <h1>🧶 Request a Custom Pattern</h1>
+            <p>
+                Can't find what you're looking for?
+                Tell us your dream crochet idea and we'll create something just for you!
+            </p>
+        </div>
+    </div>
+</section>
 
+<section class="request-section">
+    <div class="container">
+        <div class="request-card">
+            <div class="request-left">
+                <h2>Let's Create Something Together 💖</h2>
+                <p>
+                Fill in the form below and we'll get back to you within 2–3 business days.
+                </p>
 
-<footer class="text-center p-4">
-    <p>© 2026 Crochet Corner</p>
-</footer>
+                <form>
+                    <label>Your Name *</label>
+                    <input type="text" placeholder="Enter your name" required>
+                    <label>Email Address *</label>
+                    <input type="email" placeholder="Enter your email" required>
+                    <label>Category *</label>
+
+                    <select>
+                        <option>Select a category</option>
+                        <option>Plushies</option>
+                        <option>Flowers</option>
+                        <option>Accessories</option>
+                        <option>Home Decor</option>
+                        <option>Other</option>
+                    </select>
+
+                    <label>Describe Your Idea *</label>
+                    <textarea
+                    rows="6"
+                    placeholder="Tell us what you'd like us to crochet..."
+                    ></textarea>
+                    <label>Preferred Colours</label>
+                    <input type="text" placeholder="Pink, White, Green...">
+                    <label>Reference Image</label>
+                    <input type="file">
+
+                    <br><br>
+
+                    <button type="submit">
+                    Submit Request
+                    </button>
+                </form>
+            </div> 
+        </div> 
+    </div> 
+</section> 
+    <footer class="footer">
+        <h3>Follow Us!</h3>
+        <div class="footer-social">
+            <a href="https://instagram.com" class="fa-brands fa-instagram">Instagram</a>
+            <a href="https://facebook.com" class="fa-brands fa-facebook">Facebook</a>
+            <a href="https://pinterest.com" class="fa-brands fa-pinterest">Pinterest</a>
+        </div>
+        <div class="footer-bottom">
+            © 2026 Crochet Crafts
+        </div>
+    </footer>
+
+</body>
+</html>
 </html>
