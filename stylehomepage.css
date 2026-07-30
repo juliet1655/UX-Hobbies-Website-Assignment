@@ -50,9 +50,11 @@ body{
 }
 
 .logo-image {
-    max-height: 80px; 
+    width: 100px;        
+    height: auto;   
+    border-radius: 50px;     
+    object-fit: contain; 
     display: block;
-    border-radius: 50px;
 }
 
 #crochet-carousel{
@@ -328,3 +330,4 @@ section{
     padding-top:20px;
     color:#666;
 }
+
