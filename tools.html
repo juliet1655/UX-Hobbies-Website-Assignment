@@ -12,18 +12,6 @@
 
     <style>
 
-        html, body{
-            height:100%;
-            margin:0;
-            padding:0;
-        }
-
-        body{
-            display:flex;
-            flex-direction:column;
-            font-family:"Times New Roman", serif;
-        }
-
         .container{
             flex:1;
         }
@@ -31,17 +19,6 @@
         .logo-image{
             width:100px;
             height:auto;
-        }
-
-        .nav-item{
-            border-radius:20px;
-            margin-right:40px;
-            font-weight:bold;
-            background:pink;
-        }
-
-        .nav-item:hover{
-            background:#F3CFC6;
         }
 
         h1{
@@ -126,6 +103,25 @@
                 width:120px;
                 height:120px;
             }
+        
+        }
+        
+        .back-btn {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .btn-custom {
+            background-color: #fad5e5;
+            color: black;
+            border: none;
+            padding: 10px 25px;
+            font-weight: bold;
+        }
+
+        .btn-custom:hover {
+            background-color: #F3CFC6;
+        }
 
         }
 
@@ -242,6 +238,13 @@
     </table>
 
 </div>
+    <div class="back-btn">
+
+        <a href="beginners-guide.html" class="btn btn-custom">
+            ⬅ Back to Beginner's Guide
+        </a>
+
+    </div>
 
 <footer>
 

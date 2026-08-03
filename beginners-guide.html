@@ -8,72 +8,105 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <style>
-        body{
-            margin:0;
-            padding:0;
-            font-family:"Times New Roman";
-        }
-        
-        .nav-item:hover{
-        background-color: #F3CFC6;
-        color: white;
-        }
-        h1 {
-            text-align: center;
-            font-weight: bold;
-            margin-top: 3px;
-            margin-bottom: 75px;
-            color: #556B4F;
-        }
-        .project-card {
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            padding:10px;
-            border:10px solid #d4f3d9;
-            border-radius:5px;
-            background-color:#ffeae5;
-            cursor:pointer;
-            width:400px;
-            height:400px;
-        }
-        img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
-        .logo-image {
-            width: 100px;
-            height: auto;
-        }
-        .navbarNav{
-            font-size: 25px;
-            background-color: #fad5e5;
-        }
-        .nav-item{
-            border-radius: 20px;
-            font-weight:500;
-            align-items: center;
-            margin-right: 40px;
-            font-weight: bold;
-            background-color: pink;
+h1 {
+    text-align: center;
+    font-weight: bold;
+    color: #556B4F;
+    margin-bottom: 78px;
+}
 
-        }
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 10px solid #d4f3d9;
+    border-radius: 5px;
+    background-color: #ffeae5;
+    cursor: pointer;
+    width: 400px;
+    height: 400px;
+}
 
-        .nav-item:hover{
-            background-color: #F3CFC6;
-            color: white;
-            
-        }
-        footer{
-            margin-top:50px;
-            background-color: #fad5e5 ;
-        }
-        button:hover{
-            background:#fff3ef;
-        }
-</style>
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+footer {
+    margin-top: 50px;
+    background-color: #fad5e5;
+}
+
+.project-card{
+transition:all 0.3s ease;
+box-shadow:0 3px 8px rgba(0,0,0,.08);
+}
+
+.project-card:hover{
+    background:#fecbc4;
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+    border-color:#b8dfb4;
+}
+
+    .tools-card{
+        display:flex;
+        align-items:center;
+        gap:40px;
+
+        width:1000px;
+        max-width:90%;
+
+        margin:50px auto;
+        padding:30px;
+
+        border:10px solid #d4f3d9;
+        border-radius:8px;
+        background:#ffeae5;
+
+        cursor:pointer;
+    }
+
+    .tools-card img{
+        width:300px;
+        height:250px;
+        object-fit:cover;
+        border-radius:10px;
+        flex-shrink:0;
+    }
+
+    .tools-text{
+        text-align:left;
+        flex:1;
+    }
+
+    .tools-text h2{
+        font-size:48px;
+        margin-bottom:20px;
+    }
+
+    .tools-text p{
+        font-size:24px;
+        line-height:1.6;
+    }
+
+    .learn-btn{
+        display:inline-block;
+        margin-top:30px;
+        padding:12px 35px;
+        background:#d4f3d9;
+        border-radius:30px;
+        font-size:22px;
+        font-weight:bold;
+    }
+
+    .learn-btn:hover{
+        background:#b8dfb4;
+    }
+    </style>
 <body>
 
 <nav class="navbar navbar-expand-lg py-2">
@@ -131,12 +164,19 @@
             <br>
             <p>Learn a new stitch with this easy project</p>
         </button>
-        <button type="button" class="project-card" onclick="window.location.href='triple.html'">
+        <button type="button" class="project-card" onclick="window.location.href='treble-crochet.html'">
             <h2>Sample Square</h2>
-            <p>(Triple Crochet)</p>
-            <img src="triple-crochet.jpg">
+            <p>(Treble Crochet)</p>
+            <img src="treble-crochet.jpg">
             <br>
-            <p>Practice this more advanced stitch in a simple project</p>
+            <p>Learn a new stitch with this easy project</p>
+        </button>
+        <button type="button" class="project-card" onclick="window.location.href='waffle.html'">
+            <h2>Sample Square</h2>
+            <p>(Waffle Stitch)</p>
+            <img src="waffle-stitch.jpg">
+            <br>
+            <p>Make a unique textured fabric with this stitch</p>
         </button>
         <button type="button" class="project-card" onclick="window.location.href='granny.html'">
             <h2>Granny Square</h2>
@@ -144,13 +184,26 @@
             <br>
             <p>Try the classic granny square stitch using different stitches</p>
         </button>
-        <button type="button" class="project-card" onclick="window.location.href='tools.html'">
-            <h2>Materials Needed for Projects</h2>
-            <img src="tools.jpg">
-            <br>
-            <p>Unsure what to purchase for projects? Click here to find the essentials!</p>
-        </button>
     </div>
+    
+    <button class="tools-card" onclick="window.location.href='tools.html'">
+
+        <img src="tools.jpg" alt="Crochet Tools">
+
+        <div class="tools-text">
+            <h2>Materials Needed for Projects</h2>
+
+            <p>
+                Unsure what to purchase for your crochet projects?
+                Click below to find all the essentials you'll need!
+            </p>
+
+            <div class="learn-btn">
+                Find the Essentials →
+            </div>
+        </div>
+
+    </button>
 <footer class="footer">
     <h3>Follow Us!</h3>
     <div class="footer-social">

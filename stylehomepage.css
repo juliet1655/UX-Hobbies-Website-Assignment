@@ -9,21 +9,33 @@ body{
   font-size: 20px; 
 }
 
-.nav-item{
-    border-radius: 20px;
-    font-weight:500;
-    align-items: center;
-    margin-right: 40px;
-    font-weight: bold;
-    background-color: pink;
+.navbar-nav{
+    gap:20px;
+}
 
+.nav-item{
+    background:#f9bfd1;
+    border-radius:50px;
+    transition:all .3s ease;
+    box-shadow:0 3px 8px rgba(0,0,0,.08);
 }
 
 .nav-item:hover{
-    background-color: pink;
-    color: white;
-    
+    background:#f6a9c1;
+    transform:translateY(-3px);
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
 }
+
+.nav-link{
+    color:#4f3d46 !important;
+    font-weight:bold;
+    padding:12px 28px !important;
+    font-size:21px;
+}
+
+.nav-link:hover{
+    color:white !important;
+}    
 
 .custom-pill {
     padding-top: 10px;

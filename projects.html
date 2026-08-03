@@ -8,67 +8,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <style>
-        body{
-            margin: 0;
-            padding: 0;
-            font-family: 'Times New Roman';
-            height: 100%; 
-        }
-        
-        .nav-item:hover{
-        background-color: #F3CFC6;
-        color: white;
-        }
-        
-        h1 {
-            text-align: center;
-            font-weight: bold;
-            color: #556B4F;
-        }
-        .project-card {
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            padding:10px;
-            border:10px solid #d4f3d9;
-            border-radius:5px;
-            background-color:#ffeae5;
-            cursor:pointer;
-            width:400px;
-            height:400px;
-        }
-        img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
-        .navbarNav{
-            font-size: 25px;
-            background-color: #fad5e5;
-        }
-        .nav-item{
-            border-radius: 20px;
-            font-weight:500;
-            align-items: center;
-            margin-right: 40px;
-            font-weight: bold;
-            background-color: pink;
+    h1 {
+        text-align: center;
+        font-weight: bold;
+        color: #556B4F;
+    }
 
-        }
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        border: 10px solid #d4f3d9;
+        border-radius: 5px;
+        background-color: #ffeae5;
+        cursor: pointer;
+        width: 400px;
+        height: 400px;
+    }
+    .project-card{
+        transition:all 0.3s ease;
+        box-shadow:0 3px 8px rgba(0,0,0,.08);
+    }
 
-        .nav-item:hover{
-            background-color: #F3CFC6;
-            color: white;
-            
-        }
-        footer{
-            margin-top:50px;
-            background-color: #fad5e5 ;
-        }
-        button:hover{
-            background:#fff3ef;
-        }
+    .project-card:hover{
+            background:#fecbc4;
+            transform:translateY(-5px);
+            box-shadow:0 10px 20px rgba(0,0,0,.15);
+            border-color:#b8dfb4;
+    }
+
+
+    img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    footer {
+        margin-top: 50px;
+        background-color: #fad5e5;
+    }
+
 </style>
 <body>
 
@@ -129,7 +111,7 @@
         <button type="button" class="project-card" data-difficulty="1" onclick="window.location.href='coaster.html'">
             <h2>Coaster</h2>
             <img src="cutecoasters.jpeg">
-            <p>Create a simple crochet coaster to learn new patterns and changing of yarn</p>
+            <p>Create a simple crochet coaster to protect your surfaces</p>
             <p>Difficulty: ⭐</p>
         </button>
         <button type="button" class="project-card" data-difficulty="2" onclick="window.location.href='flowers.html'">
