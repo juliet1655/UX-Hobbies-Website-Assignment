@@ -304,6 +304,12 @@ section{
     box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
+.request-image{
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
 .footer{
     background-color: #f7e1eb;
     padding:40px 20px 20px;
