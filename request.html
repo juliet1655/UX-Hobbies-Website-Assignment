@@ -53,25 +53,28 @@
     </div>
 </section>
 
-<div class="request-form">
-    
+<form id="requestForm" class="request-form">
+
     <div class="form-row">
+
         <div class="form-group">
             <label>Your Name *</label>
-            <input type="text" placeholder="Enter your name">
+            <input type="text" name="name" placeholder="Enter your name" required>
         </div>
 
         <div class="form-group">
             <label>Email Address *</label>
-            <input type="email" placeholder="Enter your email">
+            <input type="email" name="email" placeholder="Enter your email" required>
         </div>
+
     </div>
 
     <div class="form-row">
+
         <div class="form-group">
             <label>Category *</label>
 
-            <select>
+            <select name="category" required>
                 <option>Select a category</option>
                 <option>Plushies</option>
                 <option>Flowers</option>
@@ -82,38 +85,87 @@
 
         <div class="form-group">
             <label>Preferred Colours</label>
-            <input type="text" placeholder="Pink, White, Green...">
+            <input type="text" name="colours" placeholder="Pink, White, Green...">
         </div>
+
     </div>
 
     <div class="form-group">
         <label>Reference Image</label>
-        <input type="file">
+        <input type="file" name="reference">
     </div>
 
     <div class="form-group">
         <label>Describe Your Idea *</label>
 
-        <textarea placeholder="Tell us what you'd like us to crochet..."></textarea>
+        <textarea
+            name="idea"
+            placeholder="Tell us what you'd like us to crochet..."
+            required></textarea>
     </div>
 
-    <button class="submit-btn">
+    <button type="submit" class="submit-btn">
         Submit Request
     </button>
-
-</div>
+</form>
     
 <footer class="footer">
-        <h3>Follow Us!</h3>
+    <div class="container">
+        <h3>Follow Our Crochet Journey! ✨</h3>
+        <p class="footer-subtitle">
+            Handmade with love for yarn lovers worldwide</p>
         <div class="footer-social">
-            <a href="https://instagram.com" class="fa-brands fa-instagram">Instagram</a>
-            <a href="https://facebook.com" class="fa-brands fa-facebook">Facebook</a>
-            <a href="https://pinterest.com" class="fa-brands fa-pinterest">Pinterest</a>
+            <a href="https://instagram.com" target="_blank" class="social-icon instagram" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://pinterest.com" target="_blank" class="social-icon pinterest" aria-label="Pinterest">
+                <i class="fa-brands fa-pinterest-p"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" class="social-icon facebook" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
         </div>
+
+        <div class="footer-links">
+            <a href="homepage.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="projects.html">Patterns</a>
+            <a href="request.html">Custom Request</a>
+        </div>
+
         <div class="footer-bottom">
-            © 2026 Crochet Crafts
+            © 2026 Crochet Crafts. Made with ❤️
         </div>
-    </footer>
+    </div>
+</footer>
+
+<script>
+const scriptURL = "https://script.google.com/macros/s/AKfycbwBdrum6wpi010Cy-cmho0ek6AGNfqHwnXolRjOXdbcWWLFHsYvtPJtwl5jwofdX0u84g/exec";
+const form = document.getElementById("requestForm");
+const submitBtn = form.querySelector(".submit-btn");
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending request... ⏳";
+
+    fetch(scriptURL, {
+        method: "POST",
+        body: new FormData(form)
+    })
+    .then(response => {
+        alert("🎉 Thank you! Your request has been submitted.");
+        form.reset();
+    })
+    .catch(error => {
+        alert("Something went wrong. Please try again.");
+    })
+    .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit Request";
+    });
+});
+</script>
 
 </body>
 </html>
