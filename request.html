@@ -53,51 +53,55 @@
     </div>
 </section>
 
-<section class="request-section">
-    <div class="container">
-        <div class="request-card">
-            <div class="request-left">
-                <h2>Let's Create Something Together 💖</h2>
-                <p>
-                Fill in the form below and we'll get back to you within 2–3 business days.
-                </p>
+<div class="request-form">
+    
+    <div class="form-row">
+        <div class="form-group">
+            <label>Your Name *</label>
+            <input type="text" placeholder="Enter your name">
+        </div>
 
-                <form>
-                    <label>Your Name *</label>
-                    <input type="text" placeholder="Enter your name" required>
-                    <label>Email Address *</label>
-                    <input type="email" placeholder="Enter your email" required>
-                    <label>Category *</label>
+        <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" placeholder="Enter your email">
+        </div>
+    </div>
 
-                    <select>
-                        <option>Select a category</option>
-                        <option>Plushies</option>
-                        <option>Flowers</option>
-                        <option>Accessories</option>
-                        <option>Home Decor</option>
-                        <option>Other</option>
-                    </select>
+    <div class="form-row">
+        <div class="form-group">
+            <label>Category *</label>
 
-                    <label>Describe Your Idea *</label>
-                    <textarea
-                    rows="6"
-                    placeholder="Tell us what you'd like us to crochet..."
-                    ></textarea>
-                    <label>Preferred Colours</label>
-                    <input type="text" placeholder="Pink, White, Green...">
-                    <label>Reference Image</label>
-                    <input type="file">
+            <select>
+                <option>Select a category</option>
+                <option>Plushies</option>
+                <option>Flowers</option>
+                <option>Bags</option>
+                <option>Accessories</option>
+            </select>
+        </div>
 
-                    <br><br>
+        <div class="form-group">
+            <label>Preferred Colours</label>
+            <input type="text" placeholder="Pink, White, Green...">
+        </div>
+    </div>
 
-                    <button type="submit">
-                    Submit Request
-                    </button>
-                </form>
-            </div> 
-        </div> 
-    </div> 
-</section> 
+    <div class="form-group">
+        <label>Reference Image</label>
+        <input type="file">
+    </div>
+
+    <div class="form-group">
+        <label>Describe Your Idea *</label>
+
+        <textarea placeholder="Tell us what you'd like us to crochet..."></textarea>
+    </div>
+
+    <button class="submit-btn">
+        Submit Request
+    </button>
+
+</div>
     
 <footer class="footer">
         <h3>Follow Us!</h3>
