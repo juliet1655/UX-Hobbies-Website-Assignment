@@ -4,35 +4,89 @@
     <title>Crochet Crafts</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="stylehomepage.css">
-    <link rel="stylesheet" href="styleaboutpage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <style>
-h1 {
-    text-align: center;
-    font-weight: bold;
-    color: #556B4F;
-    margin-bottom: 78px;
+.hero-title{
+    text-align:center;
+    margin:60px auto 50px;
+    padding:20px;
 }
 
-.project-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    border: 10px solid #d4f3d9;
-    border-radius: 5px;
-    background-color: #ffeae5;
-    cursor: pointer;
-    width: 400px;
-    height: 400px;
+.hero-title h1{
+    font-size:60px;
+    font-weight:bold;
+    color:#556B4F;
+    margin-bottom:12px;
+    letter-spacing:1px;
 }
 
-img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 10px;
+.hero-title p{
+    font-size:22px;
+    color:#6d6d6d;
+    max-width:700px;
+    margin:0 auto 25px;
+    line-height:1.6;
+}
+
+.title-divider{
+    width:220px;
+    height:4px;
+    background:#d4f3d9;
+    margin:0 auto;
+    border-radius:50px;
+}
+
+.project-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    width:360px;
+    min-height:520px;
+
+    padding:18px;
+
+    background:#feebe7;
+
+    border:5px solid #d4f3d9;
+    border-radius:22px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    cursor:pointer;
+}
+
+.project-card p{
+    font-size:17px;
+    color:#666;
+    text-align:center;
+    line-height:1.5;
+}
+
+.project-card h2{
+    font-size:34px;
+    color:#556B4F;
+    margin-top:10px;
+    margin-bottom:8px;
+    text-align:center;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+    border-color:#bfdcb8;
+    background:#ffd5d5;
+}
+
+.project-card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:15px;
+    margin:15px 0;
 }
 
 footer {
@@ -40,77 +94,108 @@ footer {
     background-color: #fad5e5;
 }
 
-.project-card{
-transition:all 0.3s ease;
-box-shadow:0 3px 8px rgba(0,0,0,.08);
+
+.featured-tools{
+    max-width:1100px;
+    margin:90px auto 60px;
+    padding:35px;
+
+    display:flex;
+    align-items:center;
+    gap:40px;
+
+    background:#feebe7;
+
+    border:5px solid #d4f3d9;
+    border-radius:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
 }
 
-.project-card:hover{
-    background:#fecbc4;
-    transform:translateY(-5px);
-    box-shadow:0 10px 20px rgba(0,0,0,.15);
-    border-color:#b8dfb4;
+.featured-tools:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+    border-color:#bfdcb8;
+    background:#ffd5d5;
 }
 
-    .tools-card{
-        display:flex;
-        align-items:center;
-        gap:40px;
+.featured-image{
+    width:320px;
+    height:320px;
 
-        width:1000px;
-        max-width:90%;
+    object-fit:cover;
 
-        margin:50px auto;
-        padding:30px;
+    border-radius:18px;
 
-        border:10px solid #d4f3d9;
-        border-radius:8px;
-        background:#ffeae5;
+    flex-shrink:0;
+}
 
-        cursor:pointer;
-    }
+.featured-content{
+    flex:1;
+}
 
-    .tools-card img{
-        width:300px;
-        height:250px;
-        object-fit:cover;
-        border-radius:10px;
-        flex-shrink:0;
-    }
+.featured-tag{
+    display:inline-block;
 
-    .tools-text{
-        text-align:left;
-        flex:1;
-    }
+    color:#c98ca6;
 
-    .tools-text h2{
-        font-size:48px;
-        margin-bottom:20px;
-    }
+    font-size:15px;
+    font-weight:bold;
 
-    .tools-text p{
-        font-size:24px;
-        line-height:1.6;
-    }
+    letter-spacing:3px;
 
-    .learn-btn{
-        display:inline-block;
-        margin-top:30px;
-        padding:12px 35px;
-        background:#d4f3d9;
-        border-radius:30px;
-        font-size:22px;
-        font-weight:bold;
-    }
+    margin-bottom:15px;
+}
 
-    .learn-btn:hover{
-        background:#b8dfb4;
-    }
-    </style>
+.featured-content h2{
+    font-size:46px;
+    color:#556B4F;
+    margin-bottom:20px;
+}
+
+.featured-content p{
+    font-size:20px;
+    color:#666;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.featured-btn{
+    display:inline-block;
+
+    padding:15px 35px;
+
+    background:#556B4F;
+    color:white;
+
+    border-radius:35px;
+
+    text-decoration:none;
+
+    font-size:20px;
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.featured-btn:hover{
+    background:#6b8164;
+    color:white;
+}
+
+.featured-btn-container{
+    display:flex;
+    justify-content:center;
+    margin-top:35px;
+}
+
+</style>
 <body>
 
-<nav class="navbar navbar-expand-lg custom-navbar">
-    <div class="container-fluid px-5 d-flex align-items-center">
+<nav class="navbar navbar-expand-lg py-2">
+    <div class="container d-flex align-items-center justify-content-between">
         <a class="navbar-brand p-0" href="homepage.html">
             <img src="logo.png" alt="Crochet Crafts logo" class="logo-image">
         </a>
@@ -139,7 +224,11 @@ box-shadow:0 3px 8px rgba(0,0,0,.08);
 </nav>
 
     <br>
-    <h1 class="page-title">Basic Crochet Stitching🧶</h1>
+<section class="hero-title">
+    <h1>🧵 Beginner's Guide</h1>
+    <p>New to crochet? Start here with our comprehensive guide to the basics!</p>
+    <div class="title-divider"></div>
+</section>
     <div style="display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap;">
         <button type="button" class="project-card" onclick="window.location.href='square.html'">
             <h2>Sample Square</h2>
@@ -184,24 +273,28 @@ box-shadow:0 3px 8px rgba(0,0,0,.08);
         </button>
     </div>
     
-    <button class="tools-card" onclick="window.location.href='tools.html'">
+<section class="featured-tools">
 
-        <img src="tools.jpg" alt="Crochet Tools">
+    <img src="tools.jpg" alt="Crochet Tools" class="featured-image">
 
-        <div class="tools-text">
-            <h2>Materials Needed for Projects</h2>
+    <div class="featured-content">
 
-            <p>
-                Unsure what to purchase for your crochet projects?
-                Click below to find all the essentials you'll need!
-            </p>
+        <span class="featured-tag">🪡 BEFORE YOU BEGIN</span>
 
-            <div class="learn-btn">
+        <h2>Materials & Tools You'll Need</h2>
+
+        <p>Want to start crocheting but don't know what you need? We've got you covered! Click here to find out what essentials you'll need to get started.</p>
+
+        <div class="featured-btn-container">
+            <a href="tools.html" class="featured-btn">
                 Find the Essentials →
-            </div>
+            </a>
         </div>
 
-    </button>
+    </div>
+
+</section>
+
 <footer class="footer">
     <h3>Follow Us!</h3>
     <div class="footer-social">

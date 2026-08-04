@@ -4,58 +4,189 @@
     <title>Crochet Crafts</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="stylehomepage.css">
-    <link rel="stylesheet" href="styleaboutpage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <style>
-    h1 {
-        text-align: center;
-        font-weight: bold;
-        color: #556B4F;
-    }
+.hero-title{
+    text-align:center;
+    margin:60px auto 50px;
+    padding:20px;
+}
 
-    .project-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        border: 10px solid #d4f3d9;
-        border-radius: 5px;
-        background-color: #ffeae5;
-        cursor: pointer;
-        width: 400px;
-        height: 400px;
-    }
-    .project-card{
-        transition:all 0.3s ease;
-        box-shadow:0 3px 8px rgba(0,0,0,.08);
-    }
+.hero-title h1{
+    font-size:60px;
+    font-weight:bold;
+    color:#556B4F;
+    margin-bottom:12px;
+    letter-spacing:1px;
+}
 
-    .project-card:hover{
-            background:#fecbc4;
-            transform:translateY(-5px);
-            box-shadow:0 10px 20px rgba(0,0,0,.15);
-            border-color:#b8dfb4;
-    }
+.hero-title p{
+    font-size:22px;
+    color:#6d6d6d;
+    max-width:700px;
+    margin:0 auto 25px;
+    line-height:1.6;
+}
 
+.title-divider{
+    width:220px;
+    height:4px;
+    background:#d4f3d9;
+    margin:0 auto;
+    border-radius:50px;
+}
 
-    img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        margin-bottom: 10px;
-    }
+.project-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 
-    footer {
-        margin-top: 50px;
-        background-color: #fad5e5;
-    }
+    width:360px;
+    min-height:520px;
+
+    padding:18px;
+
+    background:#feebe7;
+
+    border:5px solid #d4f3d9;
+    border-radius:22px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    cursor:pointer;
+}
+
+.project-card p{
+    font-size:17px;
+    color:#666;
+    text-align:center;
+    line-height:1.5;
+}
+
+.project-card h2{
+    font-size:34px;
+    color:#556B4F;
+    margin-top:10px;
+    margin-bottom:8px;
+    text-align:center;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+    border-color:#bfdcb8;
+    background:#ffd5d5;
+}
+
+.project-card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:15px;
+    margin:15px 0;
+}
+
+.difficulty{
+    display:inline-block;
+
+    margin:12px 0;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    font-size:15px;
+}
+
+.beginner{
+    background:#dff6dd;
+    color:#2e7d32;
+}
+
+.intermediate{
+    background:#fff3cd;
+    color:#996c00;
+}
+
+.advanced{
+    background:#ffd6d6;
+    color:#b71c1c;
+}
+
+footer {
+    margin-top: 50px;
+    background-color: #fad5e5;
+}
+.projects-layout{
+    display:grid;
+    grid-template-columns:250px 1fr;
+    gap:35px;
+
+    max-width:1600px;
+    margin:auto;
+
+    padding:20px;
+}
+
+.projects-grid{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.filter-sidebar{
+    background:#fff7f5;
+
+    border:5px solid #d4f3d9;
+
+    border-radius:22px;
+
+    padding:25px;
+
+    height:fit-content;
+
+    position:sticky;
+    top:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.filter-sidebar h3{
+    color:#556B4F;
+    text-align:center;
+}
+
+.filter-sidebar h5{
+    color:#556B4F;
+    margin-top:20px;
+}
+
+.filter-sidebar label{
+    display:block;
+
+    padding:8px 0;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+.filter-sidebar input{
+    margin-right:10px;
+}
 
 </style>
+
 <body>
 
-<nav class="navbar navbar-expand-lg custom-navbar">
-    <div class="container-fluid px-5 d-flex align-items-center">
+<nav class="navbar navbar-expand-lg py-2">
+    <div class="container d-flex align-items-center justify-content-between">
         <a class="navbar-brand p-0" href="homepage.html">
             <img src="logo.png" alt="Crochet Crafts logo" class="logo-image">
         </a>
@@ -84,94 +215,138 @@
 </nav>
 
     <br>
-    <h1>Free Patterns🧶</h1>
-    <div class="container mt-3 mb-4 d-flex justify-content-end">
+<section class="hero-title">
+    <h1>🧶 Free Patterns</h1>
+    <p>Discover beginner-friendly projects and fun crochet creations to make.</p>
+    <div class="title-divider"></div>
+</section>
+<div class="projects-layout">
 
-        <label for="difficulty" class="me-2"><b>Difficulty:</b></label>
+    <aside class="filter-sidebar">
 
-        <select id="difficulty" class="form-select w-auto">
+        <h3>Filters</h3>
 
-            <option value="all">Featured</option>
-            <option value="1">⭐ Beginner</option>
-            <option value="2">⭐⭐ Intermediate</option>
-            <option value="3">⭐⭐⭐ Advanced</option>
+        <hr>
 
-        </select>
+        <h5>Theme</h5>
 
-    </div>
+        <label><input type="radio" name="theme" value="all" checked> All</label>
+        <label><input type="radio" name="theme" value="plushies"> 🧸 Plushies</label>
+        <label><input type="radio" name="theme" value="accessories"> 👜 Accessories</label>
+        <label><input type="radio" name="theme" value="gifts"> 🎁 Gifts</label>
+        <label><input type="radio" name="theme" value="decor"> 🏡 Home Decor</label>
+
+        <hr>
+
+        <h5>Difficulty</h5>
+
+        <label><input type="radio" name="difficulty" value="all" checked> All</label>
+        <label><input type="radio" name="difficulty" value="1"> ⭐ Beginner</label>
+        <label><input type="radio" name="difficulty" value="2"> ⭐⭐ Intermediate</label>
+        <label><input type="radio" name="difficulty" value="3"> ⭐⭐⭐ Advanced</label>
+
+    </aside>
+
+    <div class="projects-grid">
     <div style="display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap;">
-        <button type="button" class="project-card" data-difficulty="3" onclick="window.location.href='dog.html'">
+        <button type="button" class="project-card" data-theme="plushies" data-difficulty="3" onclick="window.location.href='dog.html'">
             <h2>Dachshund Dog Plush</h2>
             <img src="dogplush.jpeg">
+            <span class="difficulty advanced">
+                ⭐⭐⭐ Advanced
+            </span>
             <p>Create a cute hot DOG partner</p>
-            <p>Difficulty: ⭐⭐⭐</p>
         </button>
-        <button type="button" class="project-card" data-difficulty="1" onclick="window.location.href='coaster.html'">
+        <button type="button" class="project-card" data-theme="decor" data-difficulty="1" onclick="window.location.href='coaster.html'">
             <h2>Coaster</h2>
             <img src="cutecoasters.jpeg">
+            <span class="difficulty beginner">
+                ⭐ Beginner
+            </span>
             <p>Create a simple crochet coaster to protect your surfaces</p>
-            <p>Difficulty: ⭐</p>
         </button>
-        <button type="button" class="project-card" data-difficulty="2" onclick="window.location.href='flowers.html'">
+        <button type="button" class="project-card" data-theme="gifts" data-difficulty="2" onclick="window.location.href='flowers.html'">
             <h2>Crochet Flowers</h2>
             <img src="flower.jpeg">
+            <span class="difficulty intermediate">
+                ⭐⭐ Intermediate
+            </span>
             <p>Create a beautiful bouquet of crochet flowers</p>
-            <p>Difficulty: ⭐⭐</p>
         </button>
-        <button type="button" class="project-card" data-difficulty="2" onclick="window.location.href='tote.html'">
+        <button type="button" class="project-card" data-theme="gifts" data-difficulty="2" onclick="window.location.href='tote.html'">
             <h2>Tote Bag</h2>
             <img src="tote-bag.jpg">
+            <span class="difficulty intermediate">
+                ⭐⭐ Intermediate
+            </span>
             <p>Create a cute and functional crochet tote bag</p>
-            <p>Difficulty: ⭐⭐</p>
         </button>
-        <button type="button" class="project-card" data-difficulty="1" onclick="window.location.href='scarf.html'">
+        <button type="button" class="project-card" data-theme="accessories" data-difficulty="1" onclick="window.location.href='scarf.html'">
             <h2>Scarf</h2>
             <img src="scarf.jpg">
+            <span class="difficulty beginner">
+                ⭐ Beginner
+            </span>
             <p>Create a warm and cozy crochet scarf for any season</p>
-            <p>Difficulty: ⭐</p>
         </button>
-        <button type="button" class="project-card" data-difficulty="3" onclick="window.location.href='snoopy.html'">
+        <button type="button" class="project-card" data-theme="plushies" data-difficulty="3" onclick="window.location.href='snoopy.html'">
             <h2>Snoopy</h2>
             <img src="snoopy.jpg">
+            <span class="difficulty advanced">
+                ⭐⭐⭐ Advanced
+            </span>
             <p>Create a cute snoopy companion</p>
-            <p>Difficulty: ⭐⭐⭐</p>
         </button>
-        <button type="button" class="project-card" data-difficulty="3" onclick="window.location.href='miffy.html'">
+        <button type="button" class="project-card" data-theme="plushies" data-difficulty="3" onclick="window.location.href='miffy.html'">
             <h2>Miffy</h2>
             <img src="miffy.jpg">
+            <span class="difficulty advanced">
+                ⭐⭐⭐ Advanced
+            </span>
             <p>Make a cute miffy friend</p>
-            <p>Difficulty: ⭐⭐⭐</p>
         </button>
-        <button type="button" class="project-card" data-difficulty="2" onclick="window.location.href='bracelet.html'">
+        <button type="button" class="project-card" data-theme="accessories" data-difficulty="2" onclick="window.location.href='bracelet.html'">
             <h2>Bracelet</h2>
             <img src="bracelet.jpg">
+            <span class="difficulty intermediate">
+                ⭐⭐ Intermediate
+            </span>
             <p>Create a cute and stylish bracelet to match your outfits</p>
-            <p>Difficulty: ⭐⭐</p>
         </button>
-        <button type="button" class="project-card" data-difficulty="2" onclick="window.location.href='blanket.html'">
+        <button type="button" class="project-card" data-theme="decor" data-difficulty="2" onclick="window.location.href='blanket.html'">
             <h2>Blanket</h2>
             <img src="blanket.jpg">
+            <span class="difficulty intermediate">
+                ⭐⭐ Intermediate
+            </span>
             <p>Create a cute and cozy blanket to keep you warm</p>
-            <p>Difficulty: ⭐⭐</p>
         </button>
-        <button type="button" class="project-card" data-difficulty="1" onclick="window.location.href='scrunchie.html'">
+        <button type="button" class="project-card" data-theme="accessories" data-difficulty="1" onclick="window.location.href='scrunchie.html'">
             <h2>Scrunchie</h2>
             <img src="scrunchie.jpg">
+            <span class="difficulty beginner">
+                ⭐ Beginner
+            </span>
             <p>Create a cute scrunchie to keep your hair in place</p>
-            <p>Difficulty: ⭐</p>
         </button>
-        <button type="button" class="project-card" data-difficulty="2" onclick="window.location.href='cat.html'">
+        <button type="button" class="project-card" data-theme="plushies" data-difficulty="2" onclick="window.location.href='cat.html'">
             <h2>Cat</h2>
             <img src="cat.jpg">
-            <p>Difficulty: ⭐⭐</p>
+            <span class="difficulty intermediate">
+                ⭐⭐ Intermediate
+            </span>
             <p>Create an adorable feline friend</p>
         </button>
-        <button type="button" class="project-card" data-difficulty="2" onclick="window.location.href='bee.html'">
+        <button type="button" class="project-card" data-theme="plushies" data-difficulty="2" onclick="window.location.href='bee.html'">
             <h2>Bee</h2>
             <img src="bee.jpg">
-            <p>Difficulty: ⭐⭐</p>
+            <span class="difficulty intermediate">
+                ⭐⭐ Intermediate
+            </span>
             <p>Make a cute honeybee</p>
         </button>
+</div>
+</div>
 </div>
 
 <footer class="footer">
@@ -186,34 +361,63 @@
     </div>
 </footer>
 
-    <script>
+<script>
+const themeFilters = document.querySelectorAll("input[name='theme']");
+const difficultyFilters = document.querySelectorAll("input[name='difficulty']");
+const projects = document.querySelectorAll(".project-card");
 
-        const filter = document.getElementById("difficulty");
-        const projects = document.querySelectorAll(".project-card");
+function filterProjects() {
 
-        filter.addEventListener("change", function(){
+    const selectedTheme =
+        document.querySelector("input[name='theme']:checked").value;
 
-            const selected = filter.value;
+    const selectedDifficulty =
+        document.querySelector("input[name='difficulty']:checked").value;
 
-            projects.forEach(function(project){
+    projects.forEach(project => {
 
-                if(selected === "all"){
-                    project.style.display = "flex";
-                }
+        const themeMatch =
+            selectedTheme === "all" ||
+            project.dataset.theme === selectedTheme;
 
-                else if(project.dataset.difficulty === selected){
-                    project.style.display = "flex";
-                }
+        const difficultyMatch =
+            selectedDifficulty === "all" ||
+            project.dataset.difficulty === selectedDifficulty;
 
-                else{
-                    project.style.display = "none";
-                }
+        project.style.display =
+            (themeMatch && difficultyMatch) ? "flex" : "none";
 
-            });
+    });
+}
 
-        });
+themeFilters.forEach(filter => {
+    filter.addEventListener("change", filterProjects);
+});
 
-    </script>
+difficultyFilters.forEach(filter => {
+    filter.addEventListener("change", filterProjects);
+});
+
+
+// 👇 ADD THIS PART HERE
+const params = new URLSearchParams(window.location.search);
+
+const theme = params.get("theme");
+
+if (theme) {
+
+    const radio = document.querySelector(
+        `input[name="theme"][value="${theme}"]`
+    );
+
+    if (radio) {
+        radio.checked = true;
+        filterProjects();
+    }
+
+}
+
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
