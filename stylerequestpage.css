@@ -63,41 +63,19 @@
     margin: 0;
 }
 
-
-.request-section{
-    background:#F8F8F8;
-    padding:80px 0;
-}
-
-.request-card{
-    background:white;
-    border-radius:25px;
-    display:flex;
-    justify-content:space-between;
-    gap:60px;
-    padding:60px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-
-.request-left{
-    flex:2;
-}
-
-.request-right{
-    flex:1;
-    text-align:center;
-}
-
-.request-left button{
+.submit-btn{
+    margin-top:30px;
     background:#FAD5E5;
+    color:#333;
+    padding:15px 30px;
     border:none;
-    padding:15px 25px;
-    border-radius:10px;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:bold;
     cursor:pointer;
     transition:.3s;
 }
 
-.request-left button:hover{
-    background:#BFD3AA;
-    color:black;
+.submit-btn:hover{
+    color:white;
 }
