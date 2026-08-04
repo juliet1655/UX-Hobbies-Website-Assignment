@@ -2,109 +2,126 @@ body{
     font-family: 'Times New Roman';
 }
 
-.navbar {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  background-color: #f7e1eb;
-  font-size: 20px; 
+.navbar{
+    background:#FCEEF4;
+    height:100px;
+    padding:0 60px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.custom-navbar{
+    background:#FCEEF4;
+    height:100px;
+    padding:0;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.logo-image{
+    width:90px;
+    height:auto;
+    border-radius:50%;
+    object-fit:contain;
+    display:block;
 }
 
 .navbar-nav{
-    gap:20px;
+    gap:70px;
 }
 
-.nav-item{
-    background:#f9bfd1;
+.nav-item-custom{
+    position:relative;
+    font-size:1.35rem;
+    font-weight:600;
+    color:#4F3A45;
+    text-decoration:none;
+    padding:35px 0;
+    transition:.25s;
+}
+
+.nav-item-custom:hover{
+    color:#D88BA7;
+}
+
+.nav-item-custom::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:18px;
+    width:0;
+    height:4px;
+    background:#D88BA7;
     border-radius:50px;
-    transition:all .3s ease;
-    box-shadow:0 3px 8px rgba(0,0,0,.08);
+    transition:width 0.3s ease;
 }
 
-.nav-item:hover{
-    background:#f6a9c1;
-    transform:translateY(-3px);
-    box-shadow:0 8px 18px rgba(0,0,0,.15);
+.nav-item-custom:hover::after{
+    width:100%;
+}
+
+.active-nav{
+    color:#D88BA7;
+}
+
+.active-nav::after{
+    width:100%;
 }
 
 .nav-link{
-    color:#4f3d46 !important;
-    font-weight:bold;
-    padding:12px 28px !important;
+    color:#4F3A45;
+    font-weight:600;
     font-size:21px;
+    padding:35px 0;
 }
 
 .nav-link:hover{
-    color:white !important;
-}    
-
-.custom-pill {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    line-height: 1.2;
+    color:#D88BA7;
 }
 
 .custom-btn{
-    display: inline-block;
+    display:inline-block;
     background:#FAD5E5;
-    color:#444;      
-    padding: 10px 24px;
-    border-radius: 50px;       
-    text-decoration: none;     
-    font-weight: bold;
-    margin-top: 15px;
-    transition: background-color 0.2s ease;
+    color:#4F3A45;
+    text-decoration:none;
+    border-radius:80px;
+    font-weight:bold;
+    font-size:20px;
+    transition:.3s;
 }
 
-.custom-btn:hover {
-    background-color: #a9caa7;
-    color: #2b4c3f;
-    text-decoration: none;
+.custom-btn:hover{
+    background:#BFD3AA;
+    color:black;
 }
 
-.logo-image {
-    width: 100px;        
-    height: auto;   
-    border-radius: 50px;     
-    object-fit: contain; 
-    display: block;
+#crochetCarousel{
+    position:relative;
 }
 
-#crochet-carousel{
-    position: relative;
-    overflow: hidden;
-    width: 100%;
+#crochetCarousel .carousel-item{
+    height:700px;
 }
 
-.carousel-item{
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    object-position: center;
+#crochetCarousel .carousel-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.carousel-inner{
-    height: auto;
+.hero-overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+    z-index:1;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); 
-    z-index: 1;
-}
-
-.slide-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    text-align: center;
-    width: 90%;
-    max-width: 800px; 
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:30px;
 }
 
 .slide-text{
@@ -112,25 +129,26 @@ body{
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
+    width:50%;
+    max-width:750px;
     text-align:center;
-    color:white;
     z-index:2;
-    width:80%;
-    background-color: rgba(0, 0, 0, 0.65); 
-    border-radius: 10px;
-    padding: 20px;
-    
+    background:rgba(0,0,0,.65);
+    padding:35px;
+    border-radius:20px;
+    color:white;
 }
 
 .slide-text h1{
-    font-size:45px;
+    font-size:3rem;
     font-weight:bold;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
 .slide-text p{
-    font-size:22px;
-    margin-bottom:35px;
+    font-size:1.4rem;
+    line-height:1.5;
+    margin-bottom:30px;
 }
 
 section{
