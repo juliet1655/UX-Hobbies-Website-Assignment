@@ -50,6 +50,7 @@
 .hero-icon{
     width:50px;
     height:auto;
+    border-radius: 15px;
 }
 
 .request-hero {
