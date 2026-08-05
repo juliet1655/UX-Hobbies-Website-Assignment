@@ -5,6 +5,9 @@ Nikko Loo: Created Projects (projects.html) and Beginners Guide (beginnersguide.
 
 References & Tools Used:
 
-Images: Photos from Unsplash (https://unsplash.com)
+Images: 
+Photos from Unsplash (https://unsplash.com)
+Photos from Google (https://google.com)
+Photos from Pinterest (https://pinterest.com)
 CSS Help: Flexbox navbar tutorial from W3Schools (https://w3schools.com/...)
-AI Assistance: Used Gemini to help troubleshoot a broken JavaScript function on the contact page.
+AI Assistance: Used ChatGPT to fix layout issues
