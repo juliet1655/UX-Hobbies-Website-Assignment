@@ -42,7 +42,8 @@
     flex-direction:column;
     align-items:center;
 
-    width:360px;
+    width:100%;
+    max-width:none;
     min-height:520px;
 
     padding:18px;
@@ -134,13 +135,10 @@ footer {
 }
 
 .projects-grid{
-    display:flex;
-    justify-content:center;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(330px, 1fr));
     gap:30px;
-    flex-wrap:wrap;
-    grid-template-columns: repeat(3,1fr);
-    gap:1.5rem;
-    width: 100%;
+    align-items:start;
 }
 
 .filter-sidebar{
@@ -182,6 +180,37 @@ footer {
 
 .filter-sidebar input{
     margin-right:10px;
+}
+
+@media (max-width: 1200px){
+
+    .projects-layout{
+        grid-template-columns:220px 1fr;
+        gap:20px;
+    }
+
+    .project-card{
+        width:320px;
+    }
+
+}
+
+@media (max-width: 992px){
+
+    .projects-layout{
+        grid-template-columns:1fr;
+    }
+
+    .filter-sidebar{
+        position:static;
+        width:100%;
+        margin-bottom:30px;
+    }
+
+    .projects-grid{
+        justify-content:center;
+    }
+
 }
 
 </style>
@@ -251,7 +280,6 @@ footer {
     </aside>
 
     <div class="projects-grid">
-    <div style="display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap;">
         <button type="button" class="project-card" data-theme="plushies" data-difficulty="3" onclick="window.location.href='dog.html'">
             <h2>Dachshund Dog Plush</h2>
             <img src="dogplush.jpeg">
