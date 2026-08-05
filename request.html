@@ -143,33 +143,66 @@
     </div>
 </footer>
 
-<script>
 const scriptURL = "https://script.google.com/macros/s/AKfycbwBdrum6wpi010Cy-cmho0ek6AGNfqHwnXolRjOXdbcWWLFHsYvtPJtwl5jwofdX0u84g/exec";
 const form = document.getElementById("requestForm");
 const submitBtn = form.querySelector(".submit-btn");
 
-form.addEventListener("submit", function(e){
+// Function to convert file to Base64
+const fileToBase64 = file => new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = error => reject(error);
+});
+
+form.addEventListener("submit", async function(e) {
     e.preventDefault();
     submitBtn.disabled = true;
     submitBtn.textContent = "Sending request... ⏳";
 
-    fetch(scriptURL, {
-        method: "POST",
-        body: new FormData(form)
-    })
-    .then(response => {
+    try {
+        const fileInput = form.querySelector('input[name="reference"]');
+        let fileData = null;
+
+        // If a file was selected, convert it to Base64
+        if (fileInput.files.length > 0) {
+            const file = fileInput.files[0];
+            const base64Raw = await fileToBase64(file);
+            
+            fileData = {
+                base64: base64Raw.split(',')[1], // Removes metadata prefix
+                mimeType: file.type,
+                fileName: file.name
+            };
+        }
+
+        // Build payload object
+        const payload = {
+            name: form.name.value,
+            email: form.email.value,
+            category: form.category.value,
+            colours: form.colours.value,
+            idea: form.idea.value,
+            file: fileData
+        };
+
+        // Send payload as JSON
+        const response = await fetch(scriptURL, {
+            method: "POST",
+            body: JSON.stringify(payload)
+        });
+
         alert("🎉 Thank you! Your request has been submitted.");
         form.reset();
-    })
-    .catch(error => {
+
+    } catch (error) {
+        console.error(error);
         alert("Something went wrong. Please try again.");
-    })
-    .finally(() => {
+    } finally {
         submitBtn.disabled = false;
         submitBtn.textContent = "Submit Request";
-    });
+    }
 });
-</script>
 
 </body>
 </html>
