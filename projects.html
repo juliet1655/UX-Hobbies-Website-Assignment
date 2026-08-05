@@ -196,6 +196,90 @@ footer {
     margin-right:10px;
 }
 
+.filter-sidebar button{
+    width:100%;
+    padding:14px 20px;
+    margin-top:15px;
+
+    border:none;
+    border-radius:30px;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+    transition:all .3s ease;
+}
+
+.filter-buttons{
+    display:flex;
+    gap:12px;
+    margin-top:20px;
+}
+
+.filter-buttons button{
+    flex:1;
+}
+
+.apply-filter-btn,
+.clear-filter-btn{
+
+    padding:12px 0;
+
+    border:none;
+    border-radius:25px;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:all .3s ease;
+}
+
+/* Apply Button */
+
+.apply-filter-btn{
+
+    background:#556B4F;
+    color:white;
+
+    box-shadow:0 6px 12px rgba(85,107,79,.2);
+}
+
+.apply-filter-btn:hover{
+
+    background:#6b8164;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 18px rgba(85,107,79,.3);
+}
+
+/* Reset Button */
+
+.clear-filter-btn{
+
+    background:#FFF6F4;
+
+    color:#556B4F;
+
+    border:2px solid #D4F3D9;
+
+    box-shadow:0 6px 12px rgba(0,0,0,.05);
+}
+
+.clear-filter-btn:hover{
+
+    background:#F3CFC6;
+
+    color:#556B4F;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 18px rgba(0,0,0,.1);
+}
+
 @media (max-width: 1200px){
 
     .projects-layout{
@@ -224,8 +308,6 @@ footer {
     .projects-grid{
         justify-content:center;
     }
-
-}
 
 </style>
 
@@ -295,6 +377,20 @@ footer {
         <label><input type="radio" name="difficulty" value="1"> ⭐ Beginner</label>
         <label><input type="radio" name="difficulty" value="2"> ⭐⭐ Intermediate</label>
         <label><input type="radio" name="difficulty" value="3"> ⭐⭐⭐ Advanced</label>
+
+        <hr>
+
+        <div class="filter-buttons">
+
+            <button id="applyFilter" class="apply-filter-btn">
+                Apply
+            </button>
+
+            <button id="clearFilter" class="clear-filter-btn">
+                Reset
+            </button>
+
+        </div>
 
     </aside>
 
@@ -458,16 +554,22 @@ function filterProjects() {
     });
 }
 
-themeFilters.forEach(filter => {
-    filter.addEventListener("change", filterProjects);
+document
+.getElementById("applyFilter")
+.addEventListener("click", filterProjects);
+
+document
+.getElementById("clearFilter")
+.addEventListener("click", function(){
+
+    document.querySelector("input[name='theme'][value='all']").checked = true;
+
+    document.querySelector("input[name='difficulty'][value='all']").checked = true;
+
+    filterProjects();
+
 });
 
-difficultyFilters.forEach(filter => {
-    filter.addEventListener("change", filterProjects);
-});
-
-
-// 👇 ADD THIS PART HERE
 const params = new URLSearchParams(window.location.search);
 
 const theme = params.get("theme");
