@@ -7,34 +7,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <style>
-.hero-title{
-    text-align:center;
-    margin:60px auto 50px;
-    padding:20px;
+.hero-title-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 12px;
 }
 
-.hero-title h1{
-    font-size:60px;
-    font-weight:bold;
-    color:#556B4F;
-    margin-bottom:12px;
-    letter-spacing:1px;
+.hero-icon{
+    width:50px;
+    height:auto;
+    border-radius: 15px;
 }
 
-.hero-title p{
-    font-size:22px;
-    color:#6d6d6d;
-    max-width:700px;
-    margin:0 auto 25px;
-    line-height:1.6;
+.hero-title {
+    background-color: #fdf4f6;
+    text-align: center;
+    margin: 0;
+    padding: 40px 20px 30px;
 }
 
-.title-divider{
-    width:220px;
-    height:4px;
-    background:#d4f3d9;
-    margin:0 auto;
-    border-radius:50px;
+.hero-title h1 {
+    font-size: 45px;
+    font-weight: bold;
+    color: #556B4F;
+    margin-top: 0;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.hero-title p {
+    font-size: 20px;
+    color: #6d6d6d;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
+
+.flower-divider {
+    color: #666;
+    font-size: 16px;
+    margin: 0;
 }
 
 .project-card{
@@ -246,12 +260,17 @@ footer {
     </div>
 </nav>
 
-    <br>
 <section class="hero-title">
-    <h1>🧶 Free Patterns</h1>
-    <p>Discover beginner-friendly projects and fun crochet creations to make.</p>
-    <div class="title-divider"></div>
+    <div class="request-hero-content">
+        <div class="hero-title-content">
+            <img src="freepatternicon.jpeg" alt="Yarn Icon" class="hero-icon">
+            <h1>Free Patterns</h1>
+        </div>
+        <p>Discover beginner-friendly projects and fun crochet creations to make.</p>
+        <p class="flower-divider">──────── ✿ ────────</p>
+    </div>
 </section>
+</div>
 <div class="projects-layout">
 
     <aside class="filter-sidebar">
