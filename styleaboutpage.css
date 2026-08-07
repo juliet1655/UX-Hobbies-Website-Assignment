@@ -2,6 +2,11 @@ h2{
     text-align: center;
 }
 
+h1{
+    font-family: 'Times New Roman';
+}
+
+
 p{
     text-align: center;
 }
@@ -9,6 +14,11 @@ p{
     width:500px;
     height: 500px;
     box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.about-section {
+    padding-top: 50px; 
+    padding-bottom: 40px;
 }
 
 .about-section h2{
@@ -46,8 +56,34 @@ p{
     margin-top: 35px;
 }
 
-h1{
-    font-family: 'Times New Roman';
+.about-section .col-lg-6 {
+    text-align: left;
+}
+
+.video-container {
+    max-height: 380px; 
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.video-container video {
+    max-height: 380px;
+    object-fit: cover; 
+}
+
+.custom-btn {
+    background-color: #558b6e;
+    color: #ffffff;
+    border: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.custom-btn:hover {
+    background-color: #437057; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .founders {
@@ -68,4 +104,24 @@ h1{
             object-fit: cover;
             margin-bottom: 10px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-		}
+}
+
+.founders-section {
+    margin-top: 100px; 
+    padding-top: 500px; 
+}
+
+.founders-section .card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.founders-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+}
+
+.founders-section img {
+    border: 4px solid #ffffff;
+}
+
+
